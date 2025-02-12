@@ -18,6 +18,14 @@ jobs:
           distribution: zulu
           java-version: 17
 
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 8.8
+        
+      - name: Check gradle version
+        run: gradle --version
+
       - name: Cache Gradle packages
         uses: actions/cache@v3
         with:
