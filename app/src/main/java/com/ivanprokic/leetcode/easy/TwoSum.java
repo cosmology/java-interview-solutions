@@ -6,13 +6,15 @@ import java.util.Map;
 
 public class TwoSum {
   public static void main(String[] args) {
+
+    TwoSum solution1 = new TwoSum();
     int[] nums = new int[] {2, 7, 11, 15};
     int target = 26;
 
     System.out.print(
         "Given elements: " + Arrays.toString(nums) + " return indices that sum up to " + target);
 
-    int[] result = twoSum(nums, target);
+    int[] result = solution1.twoSum(nums, target);
 
     System.out.print("\n\nResult: " + Arrays.toString(result));
   }
@@ -24,7 +26,7 @@ public class TwoSum {
    * @param target
    * @return Return indices of two integers that sum up to the target value
    */
-  public static int[] twoSum(int[] nums, int target) {
+  public int[] twoSum(int[] nums, int target) {
 
     // single loop, idea to in each iteration store the value preserve map
     // 1, declare Map of integers key value for storing loop number as value and index as key
