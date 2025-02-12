@@ -53,19 +53,7 @@ jacocoTestCoverageVerification {
     violationRules {
         rule {
             limit {
-                minimum = 0.5
-            }
-        }
-
-        rule {
-            enabled = false
-            element = 'CLASS'
-            includes = ['org.gradle.*']
-
-            limit {
-                counter = 'LINE'
-                value = 'TOTALCOUNT'
-                maximum = 0.3
+                minimum = 1.0
             }
         }
     }
@@ -113,3 +101,6 @@ spotless {
         endWithNewline()
     }
 }
+
+// to run coverage verification during the build
+check.dependsOn jacocoTestCoverageVerification
