@@ -37,7 +37,7 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Apply Spotless Formatting
-        run: ./gradlew spotlessApply
+        run: gradle spotlessApply
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: gradle build
