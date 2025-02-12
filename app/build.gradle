@@ -1,11 +1,17 @@
 plugins {
     id 'java'
+    id 'application'
     id "edu.wpi.first.GradleRIO" version "2024.1.1"
     id 'com.diffplug.spotless' version '6.20.0'
 }
 
 group = 'com.ivanprokic'
 version = '1.0-SNAPSHOT'
+
+application {
+    // Set a default, which can be overridden.
+    mainClass = project.findProperty('mainClass') ?: 'com.ivanprokic.leetcode.easy.TwoSum'
+}
 
 repositories {
     mavenCentral()

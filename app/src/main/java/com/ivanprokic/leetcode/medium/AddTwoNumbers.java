@@ -18,6 +18,7 @@ public class AddTwoNumbers {
 
     ListNode listNode = solution1.addTwoNumbers(l1, l2);
 
+    System.out.print("Adding linked list [2,4,3] to [5,6,4] gives ");
     System.out.print("[ ");
     while (listNode != null) {
       System.out.print(" " + listNode.val);
