@@ -77,4 +77,19 @@ class AddTwoNumbersTest {
     assertEquals(1, result.next.next.val);
     assertNull(result.next.next.next);
   }
+
+  @Test
+  void test_add_single_digit_numbers_with_carry() {
+    AddTwoNumbers solution = new AddTwoNumbers();
+
+    ListNode l1 = new ListNode(5);
+    ListNode l2 = new ListNode(5);
+
+    ListNode result = solution.addTwoNumbers(l1, l2);
+
+    assertEquals(0, result.val);
+    assertNotNull(result.next);
+    assertEquals(1, result.next.val);
+    assertNull(result.next.next);
+  }
 }
